@@ -2,7 +2,7 @@
 #define SONARLIBRARY_SONARCOMMUNICATIONAPI_H
 
 #include "../../utils/DLLUtils.h"
-#include "../../sonar/SonarSocket.h"
+#include "../../sonar/comm/SonarSocket.h"
 
 DLLEXPORT void openSonar(const unsigned long ip[4],  unsigned long port);
 

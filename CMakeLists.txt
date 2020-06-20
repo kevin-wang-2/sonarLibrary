@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(CMAKE_CXX_FLAGS "-lpthread -lws2_32 -lwsock32 -Werror -Wall")
 
-add_library(SonarLibrary SHARED library.cpp api/record/sonarRecordAPI.cpp sonar/SonarRecord.cpp sonar/SonarSocket.cpp sonar/WindowsSocketObject.cpp api/communication/sonarCommunicationAPI.cpp)
-add_executable(sonarLibTest main.cpp)
+add_library(SonarLibrary SHARED api/record/sonarRecordAPI.cpp sonar/record/SonarRecord.cpp sonar/comm/SonarSocket.cpp network/WindowsSocketObject.cpp api/communication/sonarCommunicationAPI.cpp)
+add_executable(sonarLibTest sample/main.cpp lib/libSonarLibrary.cpp)
 
 
 find_package(Threads)

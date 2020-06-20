@@ -3,7 +3,8 @@
 # 编译
 该API目前仅兼容Windows操作系统，可在支持Posix线程的MinGW下利用cmake编译。默认生成有动态链接库libSonarLibrary.dll与样例测试程序sonarLibTest.exe。
 # 使用
-当使用C/C++进行编程，可利用windows系统API来载入该动态链接库。该动态链接库包括以下接口
+此项目包含一个可以在C++中直接调用的库（位于lib文件夹中），调用libSonarLibrary.h后运行`initializeLibrary()` 函数，即可使用库函数。若未初始化或者函数未初始化成功（如找不到DLL）则会抛出异常。
+若非使用C++编程，则可利用windows系统API来载入该动态链接库。该动态链接库包括以下接口
 1. 基于基于网络的声呐通信接口
     - `void openSonar(const unsigned long ip[4],  unsigned long port)` 连接声呐，由于声呐使用UDP协议，该指令不会失败。
     - `void sendCmd(sonarCmd_t cmd)` 向声呐发送指令，`sonarCmd_t`结构体的定义可在sonar\/SonarSocket.h中找到。

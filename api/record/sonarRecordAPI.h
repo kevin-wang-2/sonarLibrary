@@ -1,7 +1,7 @@
 #ifndef SONARLIBRARY_SONARRECORDAPI_H
 #define SONARLIBRARY_SONARRECORDAPI_H
 
-#include "../../sonar/SonarRecord.h"
+#include "../../sonar/record/SonarRecord.h"
 #include "../../utils/DLLUtils.h"
 
 DLLEXPORT void openRecord(const char* fn);
