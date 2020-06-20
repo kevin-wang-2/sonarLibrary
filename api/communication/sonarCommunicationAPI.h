@@ -8,6 +8,6 @@ DLLEXPORT void openSonar(const unsigned long ip[4],  unsigned long port);
 
 DLLEXPORT void sendCmd(sonarCmd_t cmd);
 
-DLLEXPORT const sonarReplyData_t*queryData();
+DLLEXPORT const sonarReplyData_t* queryData();
 
 #endif //SONARLIBRARY_SONARCOMMUNICATIONAPI_H
