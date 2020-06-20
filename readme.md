@@ -1,8 +1,8 @@
-#简介
+# 简介
 用于与Std46C以及弋洋智能科技有限公司、世纳电子技术有限公司声呐通讯与数据存储的API。
-#编译
+# 编译
 该API目前仅兼容Windows操作系统，可在支持Posix线程的MinGW下利用cmake编译。默认生成有动态链接库libSonarLibrary.dll与样例测试程序sonarLibTest.exe。
-#使用
+# 使用
 当使用C/C++进行编程，可利用windows系统API来载入该动态链接库。该动态链接库包括以下接口
 1. 基于基于网络的声呐通信接口
     - `void openSonar(const unsigned long ip[4],  unsigned long port)` 连接声呐，由于声呐使用UDP协议，该指令不会失败。
